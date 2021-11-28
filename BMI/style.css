@@ -1,9 +1,9 @@
 body{
     margin: 20px;
     font-size: 22px;
-    background: url(../BMI/bg.jpg);
+    background: url(../BMI/bg.jpg) no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover;  
 }
 
 input {
@@ -25,14 +25,12 @@ input {
     box-shadow: 5px 3px 3px rgb(87, 86, 85);
 } */
 
-p {
-   
+p {  
     border: 1px solid;
     border-radius: 10px;
     width: 400px;
     line-height: 30px;
-    padding: 10px;
-    
+    padding: 10px;    
     background-color: antiquewhite;
     box-shadow: 5px 3px 3px rgb(87, 86, 85);
 }

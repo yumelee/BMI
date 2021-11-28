@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>自己算BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>自己算BMI</h2>
+    <label>請輸入身高：</label>
+    <input id="height" type="number" placeholder="請輸入身高(公分)" oninput=ConverterH(this.value)>
+    <br>
+    <label>請輸入體重：</label>
+    <input id="weight" type="number" placeholder="請輸入體重(公斤)" oninput=ConverterW(this.value)>
+
+
+
+    <p>您的BMI為 <span id="BMI"></span> </p>
+
+    <p>BMI結果：<br><span id="fat"></span> </p>
+
+
+    <script>
+        function ConverterW(degreeW) {
+            var x = document.getElementById("height").value / 100;
+            var y = document.getElementById("BMI").innerHTML = degreeW / (x * x);
+
+
+
+            if (y < 18.5) {
+                document.getElementById("fat").innerHTML = "BMI < 18.5，體重過輕，請注意平日飲食，並多做運動";
+            } else if (18.5 <= y && y < 24) {
+                document.getElementById("fat").innerHTML = "18.5 <= BMI < 24，健康體位，請保持健康飲食與生活作息";
+            } else if (24 <= y && y < 27) {
+                document.getElementById("fat").innerHTML = "24 <= BMI < 27，體重過重，請注意平日飲食，並多做運動";
+            } else if (27 <= y && y < 30) {
+                document.getElementById("fat").innerHTML = "27 <= BMI < 30，輕度肥胖，請多運動，留意飲食與生活作息";
+            } else if (30 <= y && y < 35) {
+                document.getElementById("fat").innerHTML = "30 <= BMI < 35，中度肥胖，要多愛護自己的健康，多運動，吃優質食物，必要時尋求醫師協助";
+            } else if (y >= 35) {
+                document.getElementById("fat").innerHTML = "BMI >= 35，重度肥胖，請先尋求醫師協助評估身體狀況，以健康方式尋求身體健康";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
